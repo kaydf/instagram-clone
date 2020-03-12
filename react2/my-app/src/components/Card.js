@@ -13,6 +13,14 @@ constructor(){
     }
 }
 
+addOne = () => {
+this.setState({position: this.state.position + 1})
+}
+
+minusOne = () => {
+    this.setState({position: this.state.position - 1})
+}
+
 
 
     render(){
@@ -42,7 +50,7 @@ constructor(){
 
         return (
             <div>
-              <CardInfo {...human} />
+              <CardInfo {...human} addOne={this.addOne} currentPosition={this.state.position} minusOne={this.minusOne} somethingFunction={this.somethingFunction}/>
             </div>
         )
     }
